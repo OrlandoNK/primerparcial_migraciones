@@ -1,0 +1,93 @@
+﻿@model primerparcial_migraciones.Models.VistaModelos
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Orlando Abreu 2019-1288</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1>Pacientes</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID &nbsp;</th>
+                <th>Nombre &nbsp;</th>
+                <th>Apellido &nbsp;</th>
+                <th>Fecha de Nacimiento &nbsp;</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var paciente in Model.Pacientes)
+            {
+                <tr>
+                    <td>@paciente.Id</td>
+                    <td>@paciente.Nombre</td>
+                    <td>@paciente.Apellido</td>
+                    <td>@paciente.FechaNacimiento</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <br>
+    <h1>Medicos</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID &nbsp;</th>
+                <th>Nombre &nbsp;</th>
+                <th>Apellido &nbsp;</th>
+                <th>Fecha de Nacimiento &nbsp;</th>
+                <th>Nacionalidad &nbsp;</th>
+                <th>Especialidad &nbsp;</th>
+                <th>Exequar &nbsp;</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var medico in Model.Medicos)
+            {
+                <tr>
+                    <td>@medico.Id</td>
+                    <td>@medico.Nombre</td>
+                    <td>@medico.Apellido</td>
+                    <td>@medico.FechaNacimiento</td>
+                    <td>@medico.Nacionalidad</td>
+                    <td>@medico.Especialidad</td>
+                    <td>@medico.Exequar</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <br>
+    
+    <h1>Usuarios</h1>
+
+    <table>
+       
+        <thead>
+            <tr>
+                <th>ID &nbsp;</th>
+                <th>Nombre &nbsp;</th>
+                <th>Apellido &nbsp;</th>
+                <th>Usuario &nbsp;</th>
+                <th>Contraseña &nbsp;</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var usuario in Model.Usuario)
+            {
+                
+                <tr>
+                    <td>@usuario.Id</td>
+                    <td>@usuario.Nombre</td>
+                    <td>@usuario.Apellido</td>
+                    <td>@usuario.usuario</td>
+                    <td>@usuario.contraseña</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+  
+
+    
+</div>
