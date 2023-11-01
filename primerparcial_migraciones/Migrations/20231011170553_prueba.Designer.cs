@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using primerparcial_migraciones.Models;
 
@@ -11,9 +12,11 @@ using primerparcial_migraciones.Models;
 namespace primerparcial_migraciones.Migrations
 {
     [DbContext(typeof(GestionMedicaContext))]
-    partial class GestionMedicaContextModelSnapshot : ModelSnapshot
+    [Migration("20231011170553_prueba")]
+    partial class prueba
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

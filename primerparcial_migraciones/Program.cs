@@ -8,7 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<GestionMedicaContext>(options =>
 
-    options.UseSqlServer(builder.Configuration.GetConnectionString("GestionMedicaConnection"))
+    options.UseSqlServer(builder.Configuration.GetConnectionString("GestionMedicaConnection_Orlando_2019-1288"))
 
 ); 
 var app = builder.Build();
